@@ -10,8 +10,6 @@ $(document).ready(function(){
 function createLink (event){
   event.preventDefault();
 
-  console.log("win")
-
   var link = getLinkData();
 
   $.post("/api/v1/links", link)
@@ -29,6 +27,7 @@ function getLinkData() {
 
 function renderLink(link){
   $("#links-list").append( linkHTML(link) )
+  $('.flash-error').remove()
   // clearLink();
 }
 
@@ -56,4 +55,6 @@ function clearLink() {
 
 function displayFailure(failureData){
   console.log("FAILED attempt to create new Link: " + failureData.responseText);
+  $('.flash-error').remove()
+  $('#new-link').prepend(`<p style="color:red;" class="flash-error">Invalid URL</p>`)
 }
