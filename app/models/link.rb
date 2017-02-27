@@ -1,4 +1,7 @@
 class Link < ApplicationRecord
+  validates :url, :url => true
+
+
   scope :hot, -> {
     select('links.url as url')
       .joins('join reads on reads.link_id = links.id')
@@ -6,4 +9,5 @@ class Link < ApplicationRecord
       .group("links.url")
       .order('count("reads".id) DESC').limit(10)
   }
+
 end
