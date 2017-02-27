@@ -21,6 +21,8 @@ gem 'sprockets-es6'
 # gem 'unicorn'
 
 # gem 'capistrano-rails', group: :development
+gem 'rb-readline'
+gem 'coolline'
 
 group :development do
   gem 'web-console', '~> 2.0'
