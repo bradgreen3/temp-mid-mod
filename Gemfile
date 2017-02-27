@@ -23,6 +23,7 @@ gem 'sprockets-es6'
 # gem 'capistrano-rails', group: :development
 gem 'rb-readline'
 gem 'coolline'
+gem 'valid_url'
 
 group :development do
   gem 'web-console', '~> 2.0'

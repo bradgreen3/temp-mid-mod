@@ -1,5 +1,7 @@
 class Link < ApplicationRecord
-  validates :url, http_url: true
+  # validates :url, http_url: true
+  validates :url, :url => true
+
 
   scope :hot, -> {
     select('links.url as url')
