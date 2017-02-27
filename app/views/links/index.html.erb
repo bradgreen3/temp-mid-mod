@@ -6,18 +6,18 @@
   </div>
 <% else %>
   <%= link_to 'Log Out', logout_path, style: 'position: absolute; right: 20px; top: 10px;' %>
-  <div class="container">
-    <h1 class="center-header", data-userId="<%=current_user.id%>">URLockBox</h1>
+  <div class="container center-contents">
+    <h1 data-userId="<%=current_user.id%>">URLockBox</h1>
+    <form id="new-link">
+      <label>URL:
+        <input id="link-url">
+      </label>
+      <label>Title:
+        <input id="link-title">
+      </label>
+      <input type="submit" value="Add Link">
+    </form>
   </div>
-  <form id="new-link">
-    <label>URL:
-      <input id="link-url">
-    </label>
-    <label>Title:
-      <input id="link-title">
-    </label>
-    <input type="submit" value="Add Link">
-  </form>
 
   <div id="links-list">
     <% @links.each do |link| %>
