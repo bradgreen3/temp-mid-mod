@@ -7,6 +7,7 @@ describe "an unauthenticated user" do
 
       expect(page).to have_link("Log In")
       expect(page).to have_link("Sign Up")
+      expect(page).to_not have_link("Log Out")
     end
   end
 end
