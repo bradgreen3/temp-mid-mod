@@ -1,3 +1,8 @@
+<% if !current_user %>
+<%= link_to 'Sign Up', signup_path %>
+<%= link_to 'Log In', login_path %>
+<% end %>
+
 <form id="new-link">
   <label>URL:
     <input id="link-url">
@@ -10,7 +15,7 @@
 
 <div id="links-list"></div>
 
-<h2>Hot Reads!</h2>
+<h2>URLockBox</h2>
 <ol id="hot-reads">
 <% @hot_links.each do |read| %>
   <li class='hot-read'>
@@ -18,4 +23,3 @@
   </li>
 <% end %>
 </ol>
-<img src="https://m.popkey.co/4c7272/QL6mJ.gif">

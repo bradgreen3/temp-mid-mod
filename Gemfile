@@ -14,7 +14,7 @@ gem 'rails_12factor', group: :production
 gem 'responders'
 gem 'awesome_print'
 gem 'bcrypt', '~> 3.1.7'
-gem 'better_errors', group: :development
+# gem 'better_errors', group: :development
 gem 'react-rails'
 gem 'sprockets-es6'
 
@@ -24,7 +24,7 @@ gem 'sprockets-es6'
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'better_errors'
+  # gem 'better_errors'
 end
 
 group :development, :test do
