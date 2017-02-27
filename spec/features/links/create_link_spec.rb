@@ -18,6 +18,7 @@ describe "create links", :js => :true do
       within('#links-list') do
         expect(page).to have_text("Turing")
         expect(page).to have_text("http://turing.io")
+        expect(page).to have_text("false")
       end
     end
     it "cannot see other user's link" do
@@ -33,10 +34,10 @@ describe "create links", :js => :true do
 
       visit "/"
       fill_in "Title:", :with => "Turing"
-      fill_in "URL:", :with => "www.turing.io"
+      fill_in "URL:", :with => "www.turing"
       click_on "Add Link"
 
-      
+      expect(page).to have_text("Invalid URL")
     end
   end
 end

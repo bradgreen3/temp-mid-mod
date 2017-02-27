@@ -1,5 +1,4 @@
 class Link < ApplicationRecord
-  # validates :url, http_url: true
   validates :url, :url => true
 
 
