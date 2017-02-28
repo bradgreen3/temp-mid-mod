@@ -16,10 +16,9 @@ $(document).ready(function(){
     });
 
     readStatus.text("true")
-
     button.text("Mark as Unread")
     button.addClass('mark-unread').removeClass('mark-read');
-
+    $this.parent().parent().addClass('read')
 
     $.ajax({
       url: 'http://localhost:4000/api/v1/links',

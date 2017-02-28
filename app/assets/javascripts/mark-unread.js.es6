@@ -15,8 +15,8 @@ $(document).ready(function(){
 
     readStatus.text("false")
     button.text("Mark as Read")
-
     button.addClass('mark-read').removeClass('mark-unread');
+    $this.parent().parent().removeClass('read')
 
   });
 });
