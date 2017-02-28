@@ -36,7 +36,7 @@ function appendLink(link) {
                 ${ link.read }
               </p>
               <p class="link_buttons">
-                <button class="mark-read">Mark as Read</button>
+                <button class="mark-unread">Mark as Unread</button>
                 <button class='edit-link'>Edit</button>
                 <button class='delete-link'>Delete</button>
               </p>
@@ -50,7 +50,7 @@ function appendLink(link) {
                 ${ link.read }
               </p>
               <p class="link_buttons">
-                <button class="mark-unread">Mark as Unread</button>
+                <button class="mark-read">Mark as Read</button>
                 <button class='edit-link'>Edit</button>
                 <button class='delete-link'>Delete</button>
               </p>
