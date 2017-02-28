@@ -7,7 +7,7 @@
 <% else %>
   <%= link_to 'Log Out', logout_path, style: 'position: absolute; right: 20px; top: 10px;' %>
   <div class="container center-contents">
-    <h1 data-userId="<%=current_user.id%>">URLockBox</h1>
+    <h1 class="main-header" data-userId="<%=current_user.id%>">URLockBox</h1>
     <form id="new-link">
       <label>URL:
         <input id="link-url">
