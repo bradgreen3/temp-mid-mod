@@ -14,6 +14,12 @@ describe "mark links as read", :js => :true do
 
       expect(page).to have_content("true")
       expect(page).to_not have_content("false")
+
+      click_on("Mark as Unread")
+
+      expect(page).to have_content("false")
+      expect(page).to_not have_content("true")
+
     end
   end
 end

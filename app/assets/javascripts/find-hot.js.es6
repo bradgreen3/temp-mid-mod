@@ -11,17 +11,19 @@ $(document).ready(function(){
       url: 'http://localhost:4000/api/v1/links'
     })
     .done(listHot)
-    .done(markTop)
   }
 
   function listHot(data) {
     $('.hot-links').children().remove();
     data.forEach(function(link, index) {
-      $('.hot-links').append(`<li class="index-`+index+`">${link}</li`)
+      if(index == 0) {
+        $('.hot-links').append(`<li class="index-`+index+`">${link}</li`)
+        $('p:contains('+link+')').css('background-color', 'green');
+      } else {
+        $('.hot-links').append(`<li class="index-`+index+`">${link}</li`)
+        $('p:contains('+link+')').css('background-color', 'red');
+      }
     })
   }
 
-  function markTop() {
-    $('.index-0').append('---TOP LINK!');
-  }
 });

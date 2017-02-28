@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+  get '/api/v1/links/search_all' => 'api/v1/links#search'
+
   namespace :api do
     namespace :v1 do
-      resources :links, only: [:create, :update]
+      resources :links, only: [:create, :update, :index]
     end
   end
 end
