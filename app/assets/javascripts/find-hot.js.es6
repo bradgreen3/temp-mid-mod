@@ -1,15 +1,12 @@
 $(document).ready(function(){
 
-  $('.find-hot').on('click', function(e){
-    e.preventDefault();
-    fetchLinks();
-  })
+  fetchLinks();
 
   function fetchLinks() {
     $.ajax({
       method: 'GET',
-      // url: 'http://localhost:4000/api/v1/links'
-      url: 'https://bg-hot-reads.herokuapp.com/api/v1/links'
+      url: 'http://localhost:4000/api/v1/links'
+      // url: 'https://bg-hot-reads.herokuapp.com/api/v1/links'
     })
     .done(listHot)
   }
