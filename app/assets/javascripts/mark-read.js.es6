@@ -21,7 +21,8 @@ $(document).ready(function(){
     $this.parent().parent().addClass('read')
 
     $.ajax({
-      url: 'http://localhost:4000/api/v1/links',
+      // url: 'http://localhost:4000/api/v1/links',
+      url: 'https://bg-hot-reads.herokuapp.com/api/v1/links',
       method: 'POST',
       data: {url: $newLinkUrl}
     });
