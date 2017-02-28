@@ -7,7 +7,6 @@ $(document).ready(function(){
     var $newLinkUrl = $(this).parents('.link').children('.link-url').text()
     var button = $this.parents('p.link_buttons').children().first()
 
-
     $.ajax({
       url: '/api/v1/links/' + linkId,
       method: 'PATCH',
@@ -18,7 +17,6 @@ $(document).ready(function(){
     button.text("Mark as Read")
 
     button.addClass('mark-read').removeClass('mark-unread');
-
 
   });
 });
