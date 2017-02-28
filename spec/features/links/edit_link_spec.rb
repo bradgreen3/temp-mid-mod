@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "edit links", :js => :true do
-  context "an unauthenticated user" do
+  context "an authenticated user" do
     it "can edit link url" do
 
       login_user
