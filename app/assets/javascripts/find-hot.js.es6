@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  $('.find-hot').on('click', function(e){
+    e.preventDefault();
+    fetchLinks();
+  })
+
   fetchLinks();
 
   function fetchLinks() {
