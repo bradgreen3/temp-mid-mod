@@ -37,7 +37,16 @@ describe "create links", :js => :true do
       fill_in "URL:", :with => "www.turing"
       click_on "Add Link"
 
-      expect(page).to have_text("Invalid URL")
+      expect(page).to have_text("Url is an invalid URL")
+    end
+    it "cannot submit without a title" do
+      login_user
+
+      visit "/"
+      fill_in "URL:", :with => "www.turing.io"
+      click_on "Add Link"
+
+      expect(page).to have_text("Title can't be blank")
     end
   end
 end

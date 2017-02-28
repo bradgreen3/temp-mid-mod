@@ -56,5 +56,6 @@ function clearLink() {
 function displayFailure(failureData){
   // console.log("FAILED attempt to create new Link: " + failureData.responseText);
   $('.flash-error').remove()
-  $('#new-link').prepend(`<p style="color:red;" class="flash-error">Invalid URL</p>`)
+  var errorMessage = JSON.parse(failureData.responseText)
+  $('#new-link').prepend(`<p style="color:red;" class="flash-error">${errorMessage}</p>`)
 }

@@ -26,6 +26,11 @@
     <button class="unread-filter">Unread</button>
   </div>
 
+  <div style="text-align: center;">
+    <p style="color: green">GREEN = TOP LINK</p>
+    <p style="color: red">RED = HOT LINK</p>
+  </div>
+
   <div id="links-list" style="display: inline-block;">
     <% @links.each do |link| %>
       <% if link.read == true %>
