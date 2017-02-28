@@ -8,26 +8,22 @@ $(document).ready(function(){
     var readStatus = $(`#link_read_${linkId}`);
     var $newLinkUrl = $(this).parents('.link').children('.link-url').text();
     var button = $this.parents('p.link_buttons').children().first()
-
     readStatus.text("true")
     button.text("Mark as Unread")
     button.addClass('mark-unread').removeClass('mark-read');
     $this.parent().parent().addClass('read')
-
+    
     $.ajax({
       url: '/api/v1/links/' + linkId,
       method: 'PATCH',
       data: {read: true}
-    })
-      .then(updateHotReads);
     });
-  })
 
-  function updateHotReads() {
     $.ajax({
       url: 'http://localhost:4000/api/v1/links',
       // url: 'https://bg-hot-reads.herokuapp.com/api/v1/links',
       method: 'POST',
       data: {url: $newLinkUrl}
     });
-  }
+  })
+})
