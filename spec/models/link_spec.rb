@@ -33,8 +33,20 @@ RSpec.describe Link, type: :model do
     results = Link.search("Go")
 
     expect(results.count).to eq(2)
-    result.each do |result|
+    results.each do |result|
       expect(result.title).to_not eq("ZZZ")
+    end
+  end
+  it "returns appropriate results by url" do
+    link_1 = Link.create(title: "Google", url: "www.google.com")
+    link_2 = Link.create(title: "Gong", url: "www.gong.com")
+    link_3 = Link.create(title: "ZZZ", url: "www.zzz.com")
+
+    results = Link.search("go")
+
+    expect(results.count).to eq(2)
+    results.each do |result|
+      expect(result.title).to_not eq("zzz")
     end
   end
 end

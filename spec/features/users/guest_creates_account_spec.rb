@@ -10,7 +10,7 @@ context "a not logged in user" do
 
     click_button "Submit"
 
-    User.where(email: "brad@test.com").should exist
+    expect(User.where(email: "brad@test.com")).to exist
 
     expect(current_path).to eq(root_path)
     expect(page).to have_content("Account created!")
