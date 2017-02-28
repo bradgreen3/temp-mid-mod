@@ -33,7 +33,7 @@ function renderLink(link){
 
 function linkHTML(link) {
 
-    return `<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link' data-id='${link.id}' id="link-${link.id}">
+    return `<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link unread' data-id='${link.id}' id="link-${link.id}">
               <p class='link-title'>${ link.title }</p>
               <p class='link-url'>${ link.url }</p>
 

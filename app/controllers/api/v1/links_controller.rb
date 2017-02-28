@@ -21,6 +21,11 @@ class Api::V1::LinksController < ApplicationController
     end
   end
 
+  def index
+    @links = Link.where(user_id: params[:user_id])
+    render json: @links, status: 200
+  end
+
   private
 
   def link_params
