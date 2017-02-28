@@ -29,7 +29,11 @@
           <%=link.read%>
         </p>
         <p class="link_buttons">
-          <button class="mark-read">Mark as Read</button>
+          <% if link.read == false %>
+            <button class="mark-read">Mark as Read</button>
+          <% else %>
+            <button class="mark-unread">Mark as Unread</button>
+          <% end %>
           <button class='edit-link'>Edit</button>
         </p>
       </div>
