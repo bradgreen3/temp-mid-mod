@@ -55,23 +55,23 @@ rails server
 
 To search links by URL or title:
 ```
-GET 'https://bg-url-lockbox/api/v1/links/search_all?q=[query]'
+GET 'https://bg-url-lockbox.herokuapp.com/api/v1/links/search_all?q=[query]'
 ```
 
 To receive all links:
 ```
-GET 'https://bg-url-lockbox/api/v1/links/'
+GET 'https://bg-url-lockbox.herokuapp.com/api/v1/links/'
 ```
 
 To create a new link:
 ```
-POST 'https://bg-url-lockbox/api/v1/links/'
+POST 'https://bg-url-lockbox.herokuapp.com/api/v1/links/'
 pass in title, url, and read status as params
 ```
 
 To edit a link:
 ```
-PATCH/PUT 'https://bg-url-lockbox/api/v1/links/:id'
+PATCH/PUT 'https://bg-url-lockbox.herokuapp.com/api/v1/links/:id'
 ```
 
 ### [Gems](#gems)
