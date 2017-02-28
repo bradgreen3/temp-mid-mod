@@ -37,7 +37,7 @@ BUNDLED WITH
 
 ## [Installation](#installation)
 
-To install, clone https://git.heroku.com/bg-url-lockbox.git and run the following commands:
+To install, clone https://github.com/bradgreen3/temp-mid-mod.git -b final and run the following commands:
 
 ```
 bundle install
