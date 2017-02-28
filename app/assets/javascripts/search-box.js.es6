@@ -28,7 +28,7 @@ function populateAllLinks(data) {
 
 function appendEachLink(link) {
     if (link.read == true) {
-      $("#links-list").append(`<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link read' data-id='${link.id}' id="link-${link.id}">
+      $("#links-list").append(`<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link unread' data-id='${link.id}' id="link-${link.id}">
                 <p class='link-title'>${ link.title }</p>
                 <p class='link-url'>${ link.url }</p>
 
@@ -42,7 +42,7 @@ function appendEachLink(link) {
                 </p>
               </div>`)
     } else {
-      $("#links-list").append(`<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link unread' data-id='${link.id}' id="link-${link.id}">
+      $("#links-list").append(`<div style="display: inline-block; border: 1px solid black; margin: 30px;" class='link read' data-id='${link.id}' id="link-${link.id}">
                 <p class='link-title'>${ link.title }</p>
                 <p class='link-url'>${ link.url }</p>
 
