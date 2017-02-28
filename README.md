@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Onboarding Tips](#onboarding)
   - [Heroku](#heroku)
+  - [Hot Reads](#hotreads)
 - [Requirements](#requirements)
   - [Ruby on Rails](#ror)
 - [Installation](#installation)
@@ -19,7 +20,7 @@
 * Hot Reads: https://bg-hot-reads.herokuapp.com/
 
 ### [Hot Reads](#hotreads)
-* URLockbox sends information about read articles to Hot Reads. Hot Reads stores the information and gives you the opportunity to see if your links are on the Hot Reads Top Ten List. No Hot Reads account is necessary. 
+* URLockbox sends information about read articles to Hot Reads. Hot Reads stores the information and gives you the opportunity to see if your links are on the Hot Reads Top Ten List. No Hot Reads account is necessary.
 
 ## [Requirements](#requirements)
 ### [Ruby on Rails](#ror)
